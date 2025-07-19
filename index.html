@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShareWale – Rent Things Nearby</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; text-align: center; }
+    header { background: #4CAF50; color: white; padding: 20px; font-size: 24px; }
+    main { padding: 20px; }
+    button { background: #25D366; border: none; color: white; padding: 15px 25px; font-size: 16px; border-radius: 8px; cursor: pointer; }
+    form { margin-top: 30px; background: white; padding: 20px; border-radius: 10px; max-width: 400px; margin-left: auto; margin-right: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    input, textarea { width: 100%; padding: 10px; margin-top: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; }
+    footer { margin-top: 50px; color: #777; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <header>
+    ShareWale – Rent Things from People Nearby!
+  </header>
+
+  <main>
+    <p>Save money by borrowing items instead of buying. If you need something, or want to rent out your own items, you're in the right place!</p>
+
+    <a href="https://chat.whatsapp.com/Gk05Q3ONTX81uAYMWUOcxg" target="_blank">
+      <button>Join WhatsApp Group</button>
+    </a>
+
+    <form action="https://formspree.io/f/xpzvqwll" method="POST">
+      <h3>List an Item for Rent</h3>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="text" name="item" placeholder="What item do you want to rent out?" required />
+      <input type="text" name="location" placeholder="Your Area or Apartment" required />
+      <input type="tel" name="contact" placeholder="Your Phone Number" required />
+      <textarea name="details" placeholder="More details (optional)"></textarea>
+      <button type="submit">Submit Listing</button>
+    </form>
+  </main>
+
+  <footer>
+    © 2025 ShareWale – Built for neighbors, by neighbors.
+  </footer>
+</body>
+</html>
