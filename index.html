@@ -1,55 +1,116 @@
-<form action="https://formspree.io/f/xpzvqwll" method="POST" enctype="multipart/form-data">
-  <h2>📦 ShareWale – List an Item to Lend or Borrow</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShareWale – Rent & Lend Nearby</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+      padding: 20px;
+      margin: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+    label {
+      display: block;
+      margin: 12px 0 6px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    input[type="file"] {
+      padding: 5px;
+    }
+    .radio-group, .radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>ShareWale – Rent & Lend Nearby</h2>
+    <form action="https://formspree.io/f/xnqekeyq" method="POST" enctype="multipart/form-data">
+      
+      <label for="fullname">1. Full Name</label>
+      <input type="text" name="Full Name" id="fullname" required>
 
-  <!-- 1. Full Name -->
-  <label><strong>1. Full Name:</strong></label><br>
-  <input type="text" name="full_name" placeholder="Your full name" required><br><br>
+      <label>2. Pickup/Delivery Options</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Pickup/Delivery" value="Self-pickup only" required> Self-pickup only</label>
+        <label><input type="radio" name="Pickup/Delivery" value="I can deliver nearby"> I can deliver nearby</label>
+        <label><input type="radio" name="Pickup/Delivery" value="Both"> Both</label>
+      </div>
 
-  <!-- 2. Pickup/Delivery Options -->
-  <label><strong>2. Pickup/Delivery Options:</strong></label><br>
-  <input type="radio" name="pickup_option" value="Self-pickup only" required> Self-pickup only<br>
-  <input type="radio" name="pickup_option" value="I can deliver nearby"> I can deliver nearby<br>
-  <input type="radio" name="pickup_option" value="Both"> Both<br><br>
+      <label>3. Upload a recent photo of yourself (for ID & trust)</label>
+      <input type="file" name="Your Photo" accept="image/*,video/*">
 
-  <!-- 3. Upload personal photo -->
-  <label><strong>3. Upload a recent photo of yourself (for ID & trust):</strong></label><br>
-  <input type="file" name="user_photo" accept="image/*,video/*"><br><br>
+      <label for="mobile">4. Mobile Number (WhatsApp)</label>
+      <input type="tel" name="Mobile Number" id="mobile" required>
 
-  <!-- 4. Mobile Number -->
-  <label><strong>4. Mobile Number (WhatsApp):</strong></label><br>
-  <input type="tel" name="mobile_number" placeholder="e.g., 9876543210" required><br><br>
+      <label>5. What do you want to do?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Action" value="I want to LEND an item" required> LEND</label>
+        <label><input type="radio" name="Action" value="I want to BORROW an item"> BORROW</label>
+      </div>
 
-  <!-- 5. Lend or Borrow -->
-  <label><strong>5. What do you want to do?</strong></label><br>
-  <input type="radio" name="action" value="LEND" required> I want to LEND an item<br>
-  <input type="radio" name="action" value="BORROW"> I want to BORROW an item<br><br>
+      <label for="itemname">6. Item Name</label>
+      <input type="text" name="Item Name" id="itemname" required>
 
-  <!-- 6. Item Name -->
-  <label><strong>6. Item Name:</strong></label><br>
-  <input type="text" name="item_name" placeholder="e.g., Chair, Camera, Powerbank" required><br><br>
+      <label for="description">7. Item Description or Any Detail (Optional)</label>
+      <textarea name="Item Description" id="description" rows="3"></textarea>
 
-  <!-- 7. Description -->
-  <label><strong>7. Item Description or Any Detail (Optional):</strong></label><br>
-  <textarea name="item_description" placeholder="Mention condition, usage instructions, etc." rows="3"></textarea><br><br>
+      <label for="rent">8. Preferred Rent (per day/week)</label>
+      <input type="text" name="Preferred Rent" id="rent" required>
 
-  <!-- 8. Rent -->
-  <label><strong>8. Preferred Rent (per day/week):</strong></label><br>
-  <input type="text" name="rent" placeholder="e.g., ₹100/day or ₹500/week" required><br><br>
+      <label for="area">9. Your Area/Landmark</label>
+      <input type="text" name="Area or Landmark" id="area" required>
 
-  <!-- 9. Area -->
-  <label><strong>9. Your Area / Landmark:</strong></label><br>
-  <input type="text" name="area" placeholder="e.g., Near Axis Bank, Yelahanka" required><br><br>
+      <label>10. Best way to contact you?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Contact Preference" value="WhatsApp" required> WhatsApp</label>
+        <label><input type="radio" name="Contact Preference" value="Phone Call"> Phone Call</label>
+        <label><input type="radio" name="Contact Preference" value="Either"> Either</label>
+      </div>
 
-  <!-- 10. Contact Preference -->
-  <label><strong>10. Best Way to Contact You:</strong></label><br>
-  <input type="radio" name="contact_method" value="WhatsApp" required> WhatsApp<br>
-  <input type="radio" name="contact_method" value="Phone Call"> Phone Call<br>
-  <input type="radio" name="contact_method" value="Either"> Either<br><br>
+      <label>11. Upload Item Photo (Optional)</label>
+      <input type="file" name="Item Photo" accept="image/*">
 
-  <!-- 11. Upload Item Photo -->
-  <label><strong>11. Upload Item Photo (Optional):</strong></label><br>
-  <input type="file" name="item_photo" accept="image/*,video/*"><br><br>
-
-  <!-- Submit -->
-  <button type="submit">✅ Submit</button>
-</form>
+      <button type="submit">Submit Listing</button>
+    </form>
+  </div>
+</body>
+</html>
