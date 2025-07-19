@@ -1,44 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ShareWale – Rent Things Nearby</title>
-  <style>
-    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; text-align: center; }
-    header { background: #4CAF50; color: white; padding: 20px; font-size: 24px; }
-    main { padding: 20px; }
-    button { background: #25D366; border: none; color: white; padding: 15px 25px; font-size: 16px; border-radius: 8px; cursor: pointer; }
-    form { margin-top: 30px; background: white; padding: 20px; border-radius: 10px; max-width: 400px; margin-left: auto; margin-right: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    input, textarea { width: 100%; padding: 10px; margin-top: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; }
-    footer { margin-top: 50px; color: #777; font-size: 14px; }
-  </style>
-</head>
-<body>
-  <header>
-    ShareWale – Rent Things from People Nearby!
-  </header>
+<form action="https://formspree.io/f/xpzvqwll" method="POST" enctype="multipart/form-data">
+  <h2>📦 ShareWale – List an Item to Lend or Borrow</h2>
 
-  <main>
-    <p>Save money by borrowing items instead of buying. If you need something, or want to rent out your own items, you're in the right place!</p>
+  <!-- 1. Full Name -->
+  <label><strong>1. Full Name:</strong></label><br>
+  <input type="text" name="full_name" placeholder="Your full name" required><br><br>
 
-    <a href="https://chat.whatsapp.com/Gk05Q3ONTX81uAYMWUOcxg" target="_blank">
-      <button>Join WhatsApp Group</button>
-    </a>
+  <!-- 2. Pickup/Delivery Options -->
+  <label><strong>2. Pickup/Delivery Options:</strong></label><br>
+  <input type="radio" name="pickup_option" value="Self-pickup only" required> Self-pickup only<br>
+  <input type="radio" name="pickup_option" value="I can deliver nearby"> I can deliver nearby<br>
+  <input type="radio" name="pickup_option" value="Both"> Both<br><br>
 
-    <form action="https://formspree.io/f/xpzvqwll" method="POST">
-      <h3>List an Item for Rent</h3>
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="text" name="item" placeholder="What item do you want to rent out?" required />
-      <input type="text" name="location" placeholder="Your Area or Apartment" required />
-      <input type="tel" name="contact" placeholder="Your Phone Number" required />
-      <textarea name="details" placeholder="More details (optional)"></textarea>
-      <button type="submit">Submit Listing</button>
-    </form>
-  </main>
+  <!-- 3. Upload personal photo -->
+  <label><strong>3. Upload a recent photo of yourself (for ID & trust):</strong></label><br>
+  <input type="file" name="user_photo" accept="image/*,video/*"><br><br>
 
-  <footer>
-    © 2025 ShareWale – Built for neighbors, by neighbors.
-  </footer>
-</body>
-</html>
+  <!-- 4. Mobile Number -->
+  <label><strong>4. Mobile Number (WhatsApp):</strong></label><br>
+  <input type="tel" name="mobile_number" placeholder="e.g., 9876543210" required><br><br>
+
+  <!-- 5. Lend or Borrow -->
+  <label><strong>5. What do you want to do?</strong></label><br>
+  <input type="radio" name="action" value="LEND" required> I want to LEND an item<br>
+  <input type="radio" name="action" value="BORROW"> I want to BORROW an item<br><br>
+
+  <!-- 6. Item Name -->
+  <label><strong>6. Item Name:</strong></label><br>
+  <input type="text" name="item_name" placeholder="e.g., Chair, Camera, Powerbank" required><br><br>
+
+  <!-- 7. Description -->
+  <label><strong>7. Item Description or Any Detail (Optional):</strong></label><br>
+  <textarea name="item_description" placeholder="Mention condition, usage instructions, etc." rows="3"></textarea><br><br>
+
+  <!-- 8. Rent -->
+  <label><strong>8. Preferred Rent (per day/week):</strong></label><br>
+  <input type="text" name="rent" placeholder="e.g., ₹100/day or ₹500/week" required><br><br>
+
+  <!-- 9. Area -->
+  <label><strong>9. Your Area / Landmark:</strong></label><br>
+  <input type="text" name="area" placeholder="e.g., Near Axis Bank, Yelahanka" required><br><br>
+
+  <!-- 10. Contact Preference -->
+  <label><strong>10. Best Way to Contact You:</strong></label><br>
+  <input type="radio" name="contact_method" value="WhatsApp" required> WhatsApp<br>
+  <input type="radio" name="contact_method" value="Phone Call"> Phone Call<br>
+  <input type="radio" name="contact_method" value="Either"> Either<br><br>
+
+  <!-- 11. Upload Item Photo -->
+  <label><strong>11. Upload Item Photo (Optional):</strong></label><br>
+  <input type="file" name="item_photo" accept="image/*,video/*"><br><br>
+
+  <!-- Submit -->
+  <button type="submit">✅ Submit</button>
+</form>
