@@ -1,155 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ShareWale – Rent or Lend Items</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShareWale – Rent or Lend in Your Area</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #c9d6ff, #e2e2e2);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f0f4ff, #e4f7fa);
+      padding: 0 1rem;
     }
-
     .header {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
+      background-color: #ffffff;
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 4px solid #4CAF50;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
     }
-
-    .title {
-      font-size: 28px;
-      font-weight: bold;
+    .header h1 {
+      margin: 0;
       color: #333;
     }
-
-    .whatsapp-btn {
-      background-color: #25D366;
-      color: white;
-      padding: 10px 18px;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
+    .header p {
+      margin: 0.5rem 0 0;
+      color: #666;
     }
-
-    form {
+    .form-wrapper {
       background: white;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      max-width: 500px;
-      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
     }
-
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
     label {
       display: block;
-      margin-top: 15px;
-      font-weight: bold;
-      color: #444;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
     }
-
-    input, textarea, select {
+    input[type="text"], input[type="number"], input[type="file"], textarea, select {
       width: 100%;
-      padding: 10px;
-      margin-top: 5px;
+      padding: 0.7rem;
       border: 1px solid #ccc;
       border-radius: 8px;
-      font-size: 14px;
+      font-size: 1rem;
     }
-
-    .radio-group, .checkbox-group {
-      margin-top: 8px;
+    .radio-group {
+      display: flex;
+      gap: 1rem;
     }
-
     .radio-group label {
-      display: block;
-      font-weight: normal;
+      font-weight: 400;
     }
-
     button[type="submit"] {
-      background-color: #007bff;
+      background-color: #4CAF50;
       color: white;
-      padding: 12px;
-      margin-top: 20px;
       border: none;
-      border-radius: 10px;
-      width: 100%;
-      font-size: 16px;
+      padding: 1rem 2rem;
+      border-radius: 8px;
       cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1rem;
     }
-
-    button[type="submit"]:hover {
-      background-color: #0056b3;
+    .whatsapp-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: #25D366;
+      color: white;
+      padding: 0.7rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
-  <div class="header">
-    <div class="title">ShareWale</div>
-    <a class="whatsapp-btn" href="https://chat.whatsapp.com/Gk05Q3ONTX81uAYMWUOcxg" target="_blank">Join WhatsApp Group</a>
-  </div>
 
-  <form action="https://formspree.io/f/xyyqoyaj" method="POST" enctype="multipart/form-data">
-    <label>1. Full Name:
-      <input type="text" name="Full Name" required />
-    </label>
+<a class="whatsapp-btn" href="https://chat.whatsapp.com/Gk05Q3ONTX81uAYMWUOcxg" target="_blank">Join WhatsApp Group</a>
 
-    <label>2. Pickup/Delivery Options:</label>
-    <div class="radio-group">
-      <label><input type="radio" name="Pickup Option" value="Self-pickup only" required /> Self-pickup only</label>
-      <label><input type="radio" name="Pickup Option" value="I can deliver nearby" /> I can deliver nearby</label>
-      <label><input type="radio" name="Pickup Option" value="Both" /> Both</label>
+<div class="header">
+  <h1>ShareWale</h1>
+  <p>Share & Borrow Easily in Your Neighborhood</p>
+</div>
+
+<div class="form-wrapper">
+  <form action="https://formspree.io/f/mnqekyvy" method="POST" enctype="multipart/form-data">
+
+    <div class="form-group">
+      <label>1. Full Name</label>
+      <input type="text" name="Full Name" required>
     </div>
 
-    <label>3. Upload a recent photo of yourself:
-      <input type="file" name="User Photo" accept="image/*,video/*" />
-    </label>
-
-    <label>4. Mobile Number (WhatsApp):
-      <input type="tel" name="WhatsApp Number" required />
-    </label>
-
-    <label>5. What do you want to do?</label>
-    <div class="radio-group">
-      <label><input type="radio" name="Intent" value="LEND" required /> I want to LEND an item</label>
-      <label><input type="radio" name="Intent" value="BORROW" /> I want to BORROW an item</label>
+    <div class="form-group">
+      <label>2. Pickup/Delivery Option</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Pickup Option" value="Self-pickup only" required> Self-pickup only</label>
+        <label><input type="radio" name="Pickup Option" value="I can deliver nearby"> I can deliver nearby</label>
+        <label><input type="radio" name="Pickup Option" value="Both"> Both</label>
+      </div>
     </div>
 
-    <label>6. Item Name:
-      <input type="text" name="Item Name" required />
-    </label>
-
-    <label>7. Item Description or Any Detail (Optional):
-      <textarea name="Item Description" rows="3"></textarea>
-    </label>
-
-    <label>8. Preferred Rent (per day/week):
-      <input type="text" name="Preferred Rent" />
-    </label>
-
-    <label>9. Your Area / Landmark:
-      <input type="text" name="Area or Landmark" required />
-    </label>
-
-    <label>10. Best way to contact you?</label>
-    <div class="radio-group">
-      <label><input type="radio" name="Contact Method" value="WhatsApp" required /> WhatsApp</label>
-      <label><input type="radio" name="Contact Method" value="Phone Call" /> Phone Call</label>
-      <label><input type="radio" name="Contact Method" value="Either" /> Either</label>
+    <div class="form-group">
+      <label>3. Upload a recent photo of yourself (for ID & trust)</label>
+      <input type="file" name="Your Photo" accept="image/*,video/*">
     </div>
 
-    <label>11. Upload Item Photo (Optional):
-      <input type="file" name="Item Photo" accept="image/*" />
-    </label>
+    <div class="form-group">
+      <label>4. Mobile Number (WhatsApp)</label>
+      <input type="text" name="WhatsApp Number" required>
+    </div>
+
+    <div class="form-group">
+      <label>5. What do you want to do?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Action" value="I want to LEND an item" required> LEND</label>
+        <label><input type="radio" name="Action" value="I want to BORROW an item"> BORROW</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>6. Item Name</label>
+      <input type="text" name="Item Name" required>
+    </div>
+
+    <div class="form-group">
+      <label>7. Item Description or Any Detail (Optional)</label>
+      <textarea name="Item Description"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>8. Preferred Rent (per day/week)</label>
+      <input type="text" name="Rent">
+    </div>
+
+    <div class="form-group">
+      <label>9. Your Area/Landmark</label>
+      <input type="text" name="Location" required>
+    </div>
+
+    <div class="form-group">
+      <label>10. Best way to contact you?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Contact Method" value="WhatsApp" required> WhatsApp</label>
+        <label><input type="radio" name="Contact Method" value="Phone Call"> Phone Call</label>
+        <label><input type="radio" name="Contact Method" value="Either"> Either</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>11. Upload Item Photo (Optional)</label>
+      <input type="file" name="Item Photo" accept="image/*">
+    </div>
 
     <button type="submit">Submit</button>
   </form>
+</div>
+
 </body>
 </html>
