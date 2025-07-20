@@ -3,36 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ShareWale - Rent & Lend Locally</title>
+  <title>ShareWale - Rent, Borrow, Help</title>
   <style>
     body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eafae5;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #e7f8e5; /* Light green */
-      color: #333;
-    }
-    header {
+      padding: 0;
       text-align: center;
-      padding: 20px;
-      background-color: #d4f3cd;
     }
-    header img {
-      height: 100px;
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      margin-top: 40px;
     }
+
+    .logo {
+      max-width: 120px;
+      margin-bottom: 10px;
+    }
+
     h1 {
-      font-size: 2rem;
-      margin-top: 10px;
+      margin: 10px 0;
+      color: #2c3e50;
     }
-    .form-section {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
+
+    .tagline {
+      font-size: 20px;
+      color: #27ae60;
+      margin-bottom: 25px;
+      font-weight: 500;
     }
+
     iframe {
       width: 100%;
+      height: 1100px;
       border: none;
-      height: 1800px;
+      border-radius: 8px;
     }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #d9f7d6;
+      color: #333;
+      font-size: 14px;
+      border-top: 1px solid #c5ecc0;
+    }
+
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
@@ -41,42 +64,39 @@
       color: white;
       border: none;
       border-radius: 50px;
-      padding: 15px 20px;
+      padding: 14px 20px;
       font-size: 16px;
-      cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       display: flex;
       align-items: center;
       gap: 8px;
-    }
-    .whatsapp-button img {
-      height: 20px;
+      z-index: 1000;
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.5rem;
-      }
-      iframe {
-        height: 2000px;
-      }
+    .whatsapp-button:hover {
+      background-color: #1ebe5d;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="ShareWale Logo" />
-    <h1>Welcome to ShareWale</h1>
-  </header>
 
-  <div class="form-section">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfi7LBz0yJtE74XyxbFhvyTEJTPRxBKEW7o9wQJFAuwXQFw2g/viewform?embedded=true">Loading…</iframe>
+  <div class="container">
+    <img src="logo.png" alt="ShareWale Logo" class="logo" />
+    <h1>Welcome to ShareWale</h1>
+    <div class="tagline">Rent, Borrow, Help</div>
+
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfi7LBz0yJtE74XyxbFhvyTEJTPRxBKEW7o9wQJFAuwXQFw2g/viewform?embedded=true"
+    frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </div>
 
-  <a class="whatsapp-button" href="https://wa.me/message/Gk05Q3ONTX81uAYMWUOcxg" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
-    Chat on WhatsApp
+  <a href="https://chat.whatsapp.com/Gk05Q3ONTX81uAYMWUOcxg" target="_blank" class="whatsapp-button">
+    💬 Chat with us
   </a>
+
+  <footer>
+    © 2025 ShareWale | Made with ❤️ for Neighbours
+  </footer>
+
 </body>
 </html>
