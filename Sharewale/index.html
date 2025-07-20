@@ -2,113 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ShareWale - Neighborhood Rentals</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShareWale - Rent & Share Nearby</title>
+  <link rel="icon" href="logo.png" type="image/png">
   <style>
     body {
-      font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
+
     header {
-      background-color: #007b5e;
+      background-color: #007bff;
       color: white;
-      padding: 1.5rem;
+      padding: 1rem;
       text-align: center;
     }
-    .container {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
+
+    header img {
+      height: 50px;
     }
-    .section {
-      margin-bottom: 3rem;
+
+    header h1 {
+      margin: 0.3rem 0 0;
+      font-size: 1.8rem;
     }
-    h2 {
-      color: #007b5e;
+
+    .tagline {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-top: 0.3rem;
+      color: #f0f0f0;
     }
-    .steps {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .step {
-      flex: 1 1 250px;
-      background: #e6f3ef;
+
+    main {
+      flex: 1;
       padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: center;
     }
+
     iframe {
       width: 100%;
-      height: 600px;
+      max-width: 800px;
+      height: 1000px;
       border: none;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background: white;
+      border-radius: 10px;
     }
+
     footer {
-      background-color: #007b5e;
-      color: white;
       text-align: center;
       padding: 1rem;
+      background-color: #e9ecef;
+      font-size: 0.9rem;
+      color: #555;
     }
-    a {
-      color: #007b5e;
-      text-decoration: none;
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50px;
+      padding: 12px 18px;
+      font-size: 16px;
       font-weight: bold;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebc59;
+    }
+
+    .whatsapp-float img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        height: 1400px;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
+    <img src="logo.png" alt="ShareWale Logo">
     <h1>ShareWale</h1>
-    <p>Rent. Lend. Earn. Save – Neighbors Helping Neighbors.</p>
+    <div class="tagline">Rent, Borrow, Help</div>
   </header>
 
-  <div class="container">
-    <section class="section">
-      <h2>How It Works</h2>
-      <div class="steps">
-        <div class="step">
-          <strong>1. List or Find Items</strong><br/>
-          Share what you have or find what you need.
-        </div>
-        <div class="step">
-          <strong>2. Connect on WhatsApp</strong><br/>
-          Chat directly with neighbors.
-        </div>
-        <div class="step">
-          <strong>3. Rent or Lend Safely</strong><br/>
-          Exchange items responsibly.
-        </div>
-      </div>
-    </section>
+  <main>
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfi7LBz0yJtE74XyxbFhvyTEJTPRxBKEW7o9wQJFAuwXQFw2g/viewform?usp=sf_link" 
+      allowfullscreen>
+    </iframe>
+  </main>
 
-    <section class="section">
-      <h2>List Your Item</h2>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe9RhJRW6jvAghVo6txStI0d7JJTDk2OtZBAF0KnWh7n_19fA/viewform?embedded=true">Loading…</iframe>
-    </section>
-
-    <section class="section">
-      <h2>Safety Tips</h2>
-      <ul>
-        <li>Always verify ID or identity before lending.</li>
-        <li>Meet in safe public spaces.</li>
-        <li>Click photos of items before handing over.</li>
-        <li>Use security deposit if needed.</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Join Our Community</h2>
-      <p>👥 Join our WhatsApp group: <a href="https://chat.whatsapp.com/Gk05Q3ONTX81uAYMWUOcxg?mode=ac_t" target="_blank">Click here to join</a></p>
-      <p>📧 Contact us: <a href="mailto:sharewalehelp@gmail.com">sharewalehelp@gmail.com</a></p>
-    </section>
-  </div>
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/918210571855?text=Hi%20ShareWale%20Team%2C%20I%20have%20a%20question"
+    target="_blank"
+  >
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" />
+    Chat with us
+  </a>
 
   <footer>
-    <p>© 2025 ShareWale – Made for the Neighborhood</p>
+    © 2025 ShareWale – Built with ❤️ for your neighborhood. All rights reserved.
   </footer>
+
 </body>
 </html>
